@@ -40,7 +40,7 @@ const page = () => {
                 </button>
                 {generated &&
                     <>
-                        <span>Your Link - </span><code><Link href={generated} target='_blank'>{generated}</Link>
+                        <span className='text-emerald-950'>Your Link - </span><code><Link className='text-emerald-950 hover:text-emerald-600' href={generated} target='_blank'>{generated}</Link>
                         </code></>}
             </div>
         </div >
