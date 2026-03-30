@@ -1,5 +1,32 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import { Montserrat_Alternates, Pacifico, Poiret_One, Silkscreen } from 'next/font/google'
+import './globals.css'
+
+const montserrat = Montserrat_Alternates({
+  subsets: ['latin'],
+  weight: ['100', '400', '700', '900'],
+  variable: '--font-montserrat',
+})
+
+const pacifico = Pacifico({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-pacifico',
+})
+
+const poiret = Poiret_One({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-poiret',
+})
+
+const silkscreen = Silkscreen({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-silkscreen',
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +47,10 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${pacifico.variable} ${poiret.variable} ${silkscreen.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col"><Navbar/>
+      {children}</body>
     </html>
   );
 }
