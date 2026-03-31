@@ -29,6 +29,7 @@ const page = () => {
                 if (result.message==="URL already exists") {
                     setgenerated("");
                     seterror(result.message);
+                    setloading(false);
                     return;
                 }
                 seterror("");
