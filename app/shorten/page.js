@@ -48,8 +48,8 @@ const page = () => {
                 Generate Your Short URLs
             </div>
             <div className="container bg-green-200 p-6 md:p-10 w-90 md:w-200 flex flex-col gap-5 rounded-lg">
-                <input type="text" placeholder='Enter your URL' value={url} onChange={e => { seturl(e.target.value) }} className='bg-white font-medium text-emerald-950 rounded-lg p-2 focus:outline-emerald-900'/>
-                <input type="text" placeholder='Enter your preferred URL text' value={shorturl} onChange={e => { setshorturl(e.target.value) }} className='bg-white font-medium text-emerald-950 rounded-lg p-2 focus:outline-emerald-900'/>
+                <input type="text" placeholder='Enter your URL' value={url} onChange={e => { seturl(e.target.value) }} className='bg-white font-medium text-emerald-950 rounded-lg p-2 focus:outline-emerald-900 text-sm md:text-base'/>
+                <input type="text" placeholder='Enter your preferred URL text' value={shorturl} onChange={e => { setshorturl(e.target.value) }} className='bg-white font-medium text-emerald-950 rounded-lg p-2 focus:outline-emerald-900 text-sm md:text-base'/>
                 <button disabled={loading} onClick={generate} className="bg-emerald-800 text-white rounded-lg px-8 py-3 font-[silkscreen] cursor-pointer hover:bg-emerald-700 mt-2 flex justify-center">
                     {loading ? "Generating..." : "Generate"}
                 </button>
