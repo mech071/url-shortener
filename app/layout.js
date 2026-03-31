@@ -39,7 +39,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ShortIt",
+  title: "ShortLy",
   description: "url shortener",
 };
 

@@ -4,7 +4,7 @@ import clientPromise from "@/lib/mongodb"
 export default async function Page({ params }) {
     const shorturl = (await params).shorturl
     const client = await clientPromise;
-    const db = client.db("Shortit");
+    const db = client.db("ShortLy");
     const collection = db.collection("url");
     const existing = await collection.findOne({ shorturl: shorturl });
 
