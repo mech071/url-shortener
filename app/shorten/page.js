@@ -26,9 +26,9 @@ const page = () => {
         fetch("/api/generate", requestOptions)
             .then(async (response) => {
                 const result = await response.json();
-                if (!response.ok) {
+                if (result.message==="URL already exists") {
                     setgenerated("");
-                    seterror(result.message || "Something went wrong");
+                    seterror(result.message);
                     return;
                 }
                 seterror("");
