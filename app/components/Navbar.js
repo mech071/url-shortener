@@ -6,11 +6,11 @@ const Navbar = () => {
         <>
             <div className='h-16 bg-green-400/70 flex justify-between items-center md:px-4 px-3'>
                 <Link href="/">
-                    <div className="hero text-emerald-950 font-medium cursor-pointer md:text-3xl text-2xl font-[silkscreen]">
+                    <div className="hero text-emerald-950 font-medium cursor-pointer md:text-3xl text-2xl font-[silkscreen] hover:scale-105 transition duration-300">
                         ShortLy
                     </div>
                 </Link>
-                <div className="font-[montserrat] md:text-lg text-sm font-bold text-emerald-950 cursor-pointer">
+                <div className="font-[silkscreen] md:text-lg text-sm font-light hover:scale-105 transition duration-300 text-emerald-950 cursor-pointer">
                     <Link href="https://github.com/mech071/url-shortener" target="_blank">Github</Link>
                 </div>
             </div>
